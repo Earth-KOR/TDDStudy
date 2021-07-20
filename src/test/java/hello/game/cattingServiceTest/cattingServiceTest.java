@@ -93,37 +93,37 @@ public class cattingServiceTest {
     }
 
 
-    @Test
-    void normal_user_matting_catting_insert_db_Exception() throws Exception {
-
-        //red
-
-            //given
-            List<User> mattingUserList = new ArrayList<>();
-            User requestUser = new User(); // 랜덤채팅을 신청한 유저
-            User responseUser = new User(MemberShip.NORMAR); // 랜덤채팅 상대
-            mattingUserList.add(requestUser);
-            mattingUserList.add(responseUser);
-            when(userRepository.insertMattingUserList(mattingUserList)).thenThrow(new Exception());
-            when(userService.findOneUser(any())).thenReturn(responseUser);
-
-            //when
-            //Exception e = cattingService.randomMatting(requestUser);  --> 입센션 받음
-
-            //then
-            //Assertions.assertThat(responseUser.getMemberShip()).isEqualTo(MemberShip.NORMAR); --> 입센션 비교
-
-
-        // green
-
-            // Service 로직 수정하기
-
-
-        //blue
-
-            // 리펙토링 x
-
-    }
+//    @Test
+//    void normal_user_matting_catting_insert_db_Exception() throws Exception {
+//
+//        //red
+//
+//            //given
+//            List<User> mattingUserList = new ArrayList<>();
+//            User requestUser = new User(); // 랜덤채팅을 신청한 유저
+//            User responseUser = new User(MemberShip.NORMAR); // 랜덤채팅 상대
+//            mattingUserList.add(requestUser);
+//            mattingUserList.add(responseUser);
+//            when(userRepository.insertMattingUserList(mattingUserList)).thenThrow(new Exception());
+//            when(userService.findOneUser(any())).thenReturn(responseUser);
+//
+//            //when
+//            responseUser = cattingService.randomMatting(requestUser);  // --> 입센션 받음
+//
+//            //then
+//
+//
+//
+//        // green
+//
+//            // Service 로직 수정하기
+//
+//
+//        //blue
+//
+//            // 리펙토링 x
+//
+//    }
 
 
 

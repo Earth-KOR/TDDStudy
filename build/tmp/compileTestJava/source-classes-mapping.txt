@@ -1,6 +1,4 @@
-hello/hellospring/HelloSpringApplicationTests.java
- hello.hellospring.HelloSpringApplicationTests
-hello/hellospring/repository/MemoryMemberRepositoryTest.java
- hello.hellospring.repository.MemoryMemberRepositoryTest
-hello/hellospring/repository/service/MemberServiceTest.java
- hello.hellospring.repository.service.MemberServiceTest
+hello/game/cattingServiceTest/cattingServiceTest.java
+ hello.game.cattingServiceTest.cattingServiceTest
+hello/game/gameApplicationTests.java
+ hello.game.gameApplicationTests

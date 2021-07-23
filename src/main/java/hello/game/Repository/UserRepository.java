@@ -10,11 +10,12 @@ public interface UserRepository {
 
     void applyUser(ApplyUserDTO user);
 
-    void payPayment(User user);
+    Long payPayment(User user);
 
-    void updateMembership(User user);
+    MemberShip updateMembership(User user);
 
     Long insertMattingUserList(List<User> userList);
 
+    List<User> findMostLikedUser();
 
 }

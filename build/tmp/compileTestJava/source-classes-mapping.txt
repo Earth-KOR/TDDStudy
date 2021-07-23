@@ -1,4 +1,4 @@
-hello/game/cattingServiceTest/cattingServiceTest.java
- hello.game.cattingServiceTest.cattingServiceTest
 hello/game/gameApplicationTests.java
  hello.game.gameApplicationTests
+hello/game/cattingServiceTest/cattingServiceTest.java
+ hello.game.cattingServiceTest.cattingServiceTest

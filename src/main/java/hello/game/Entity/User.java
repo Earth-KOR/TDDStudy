@@ -54,10 +54,6 @@ public class User {
         this.amountOfBen = amountOfBen;
     }
 
-    public Long getAmountOfLike() {
-        return amountOfLike;
-    }
-
     public void setAmountOfLike(Long amountOfLike) {
         this.amountOfLike = amountOfLike;
     }
@@ -76,5 +72,9 @@ public class User {
 
     public void setMemberShip(MemberShip memberShip) {
         this.memberShip = memberShip;
+    }
+
+    public Long getAmountOfLike() {
+        return amountOfLike;
     }
 }

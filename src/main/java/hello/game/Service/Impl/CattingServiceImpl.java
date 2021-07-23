@@ -5,19 +5,23 @@ import hello.game.Enum.MemberShip;
 import hello.game.Repository.UserRepository;
 import hello.game.Service.CattingService;
 import hello.game.Service.UserService;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
-@AllArgsConstructor
+
 @Service
 public class CattingServiceImpl implements CattingService {
 
     private final UserService userService;
     private final UserRepository userRepository;
+
+    public CattingServiceImpl(UserService userService, UserRepository userRepository) {
+        this.userService = userService;
+        this.userRepository = userRepository;
+    }
 
     @Override
     public User randomMatting(User user) throws Exception {
@@ -30,30 +34,52 @@ public class CattingServiceImpl implements CattingService {
         mattingUserList.add(responseUser);
 
         //CASE 1
-        //        userRepository.insertMattingUserList(mattingUserList)
+        // userRepository.insertMattingUserList(mattingUserList)
 
         //CASE 2
-        //         insertMattingUserDB(mattingUserList);
+        // insertMattingUserDB(mattingUserList);
 
         //CASE 3
-        try {
-            insertMattingUserDB(mattingUserList);
-        }catch (Exception e) {
-            System.out.println("채팅방 입장에 실패하였습니다.");
-        }
+        insertMattingUserDB(mattingUserList);
 
         return responseUser;
     }
 
     //CASE 2 && 3
-    private void insertMattingUserDB(List<User> mattingUserList)
+    private Long insertMattingUserDB(List<User> mattingUserList)
     {
-        userRepository.insertMattingUserList(mattingUserList);
+        return userRepository.insertMattingUserList(mattingUserList);
     }
 
 
     @Override
     public List<User> PremiumRandomMatting(User user) {
-        return null;
+
+        // CASE 1
+        List<User> mattingUserList = new ArrayList<>();
+
+        List<User> listOfUser = userRepository.findMostLikedUser();
+
+        listOfUser.sort(Comparator.comparing(User::getAmountOfLike).reversed());
+
+//      // CASE 2
+//      user.setAmountOfPurchase(userRepository.payPayment(user));
+//
+//      // CASE 3
+//      user.setMemberShip(userRepository.updateMembership(user));
+        updateUserInfo(user);
+
+        mattingUserList.add(listOfUser.get(0));
+        mattingUserList.add(user);
+
+        return mattingUserList;
+        
+    }
+
+    private void updateUserInfo(User user) {
+
+        user.setAmountOfPurchase(userRepository.payPayment(user));
+
+        user.setMemberShip(userRepository.updateMembership(user));
     }
 }

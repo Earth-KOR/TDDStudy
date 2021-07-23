@@ -2,8 +2,10 @@ package hello.game.Repository.Impl;
 
 import hello.game.DTO.ApplyUserDTO;
 import hello.game.Entity.User;
+import hello.game.Enum.MemberShip;
 import hello.game.Repository.UserRepository;
 import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 
@@ -16,17 +18,23 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void payPayment(User user) {
-
+    public Long payPayment(User user) {
+        return null;
     }
 
     @Override
-    public void updateMembership(User user) {
-
+    public MemberShip updateMembership(User user) {
+        return null;
     }
 
     @Override
     public Long insertMattingUserList(List<User> userList) {
+        System.out.println("호츌");
+        return 33L;
+    }
+
+    @Override
+    public List<User> findMostLikedUser() {
         return null;
     }
 }

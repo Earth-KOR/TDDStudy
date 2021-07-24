@@ -18,4 +18,10 @@ public interface UserRepository {
 
     List<User> findMostLikedUser();
 
+    User applyLikeToUser(User user, Boolean isLikeUser);
+
+    String spyTest();
+
+    Long countFeedback(User user);
+
 }

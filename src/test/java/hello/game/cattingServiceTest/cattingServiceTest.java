@@ -187,7 +187,6 @@ public class cattingServiceTest {
 
             when(userRepository.payPayment(premiumUser)).thenReturn(5000L);
             when(userRepository.findMostLikedUser()).thenReturn(findListUser);
-//            when(userRepository.updateMembership(premiumUser)).thenReturn("VIP");
 
             //when
             List<User> mattingUserList = cattingService.PremiumRandomMatting(premiumUser);

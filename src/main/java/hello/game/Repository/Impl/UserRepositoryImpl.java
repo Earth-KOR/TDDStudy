@@ -37,4 +37,23 @@ public class UserRepositoryImpl implements UserRepository {
     public List<User> findMostLikedUser() {
         return null;
     }
+
+    @Override
+    public User applyLikeToUser(User user, Boolean isLikeUser) {
+        Long amountLike = user.getAmountOfLike();
+        amountLike++;
+        user.setAmountOfLike(amountLike);
+        return user;
+
+    }
+
+    @Override
+    public String spyTest() {
+        return "스파이 테스트";
+    }
+
+    @Override
+    public Long countFeedback(User user) {
+        return null;
+    }
 }

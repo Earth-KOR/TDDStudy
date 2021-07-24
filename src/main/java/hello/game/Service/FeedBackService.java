@@ -1,9 +1,11 @@
 package hello.game.Service;
 
+import hello.game.Entity.User;
+
 public interface FeedBackService {
 
     Boolean applyBenToUser(Boolean isUserBen);
 
-    Boolean applyLikeToUser(Boolean isUserLike);
+    User applyLikeToUser(User user, Boolean isUserLike);
 
 }

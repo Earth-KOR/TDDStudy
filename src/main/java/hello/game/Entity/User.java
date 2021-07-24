@@ -16,6 +16,7 @@ public class User {
     private Long amountOfLike;
     private Long amountOfPurchase;
     private MemberShip memberShip;
+    private Long count;
 
 
     public User(MemberShip memberShip) {
@@ -76,5 +77,13 @@ public class User {
 
     public Long getAmountOfLike() {
         return amountOfLike;
+    }
+
+    public Long getCount() {
+        return count;
+    }
+
+    public void setCount(Long count) {
+        this.count = count;
     }
 }

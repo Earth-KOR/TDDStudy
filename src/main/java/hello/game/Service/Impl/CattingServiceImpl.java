@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Service
@@ -65,8 +64,10 @@ public class CattingServiceImpl implements CattingService {
 //      // CASE 2
 //      user.setAmountOfPurchase(userRepository.payPayment(user));
 //
-//      // CASE 3
+//      // CASE 3 (추가)
 //      user.setMemberShip(userRepository.updateMembership(user));
+
+        // CASE 3 - 리펙토링
         updateUserInfo(user);
 
         mattingUserList.add(listOfUser.get(0));
@@ -76,6 +77,7 @@ public class CattingServiceImpl implements CattingService {
         
     }
 
+    // CASE 3 - 리펙토링
     private void updateUserInfo(User user) {
 
         user.setAmountOfPurchase(userRepository.payPayment(user));

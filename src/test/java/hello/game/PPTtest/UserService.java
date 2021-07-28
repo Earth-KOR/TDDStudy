@@ -1,8 +1,9 @@
 package hello.game.PPTtest;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
+@Component
 public class UserService {
 
     public String test () {

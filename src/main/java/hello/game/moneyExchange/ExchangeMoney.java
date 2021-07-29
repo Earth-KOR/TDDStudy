@@ -7,7 +7,7 @@ public interface ExchangeMoney {
 
     int addMoney(Money money);
 
-    double exchangeMoney(MoneyUser moneyUser, Money money, String nation);
+    double exchangeMoney(Money money, String nation);
 
 
 }

@@ -6,12 +6,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class ExchangeRate {
 
-    private ExtendClass extendClass;
-
-    public ExchangeRate(ExtendClass extendClass) {
-        this.extendClass = extendClass;
-    }
-
     public double findByExchangeRate(Money money, String nation) {
         double Rate;
 
@@ -22,7 +16,6 @@ public class ExchangeRate {
                     Rate = 1.6;
                     break;
                 case "JAN":
-                    extendClass.String();
                     Rate = 2;
                     break;
                 default:
@@ -37,7 +30,6 @@ public class ExchangeRate {
                     Rate = 1.3;
                     break;
                 case "KOR":
-                    extendClass.String();
                     Rate = 1.5;
                     break;
                 default:

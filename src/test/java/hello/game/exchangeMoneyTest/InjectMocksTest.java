@@ -24,7 +24,6 @@ public class InjectMocksTest {
     MoneyUser moneyUser;
 
     @InjectMocks
-    @Autowired
     ExchangeMoneyImpl exchangeMoney;
 
     @Test

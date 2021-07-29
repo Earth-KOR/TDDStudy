@@ -11,9 +11,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 @SpringBootTest
 public class PPTtest2 {
 
-    @SpyBean
+    @MockBean
     private UserService userService;
-
 
     @Test
     void test1() {

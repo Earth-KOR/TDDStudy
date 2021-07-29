@@ -9,42 +9,21 @@ import org.springframework.stereotype.Component;
 public class ExchangeMoneyImpl implements ExchangeMoney {
 
     private ExchangeRate exchangeRate;
-    private MoneyUser moneyUser;
 
-    public ExchangeMoneyImpl(ExchangeRate exchangeRate, MoneyUser moneyUser) {
+    public ExchangeMoneyImpl(ExchangeRate exchangeRate) {
         this.exchangeRate = exchangeRate;
-        this.moneyUser = moneyUser;
     }
 
     @Override
     public int addMoney(Money money) {
-
-        int amount = money.getAmountOfMoney();
-        int count = money.getCountOfMoney();
-
-        return amount * count;
+        return 0;
     }
 
     @Override
-    public double exchangeMoney(MoneyUser moneyUser, Money money, String nation) {
+    public double exchangeMoney( Money money, String nation) {
 
-        double rate = exchangeRate.findByExchangeRate(money, nation);
-
-        return addMoney(money) * (findByRate(moneyUser)*rate);
+        return 0;
     }
 
-    private double findByRate(MoneyUser moneyUser) {
 
-        double rate = 0;
-
-        if(moneyUser.getMembership().equals("VIP")) {
-            rate = 1.1;
-        }else if(moneyUser.getMembership().equals("VVIP")) {
-            rate = 1.2;
-        }else{
-            rate = 1.0;
-        }
-
-        return rate;
-    }
 }

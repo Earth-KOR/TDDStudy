@@ -8,14 +8,14 @@ hello/game/cattingServiceTest/cattingServiceTest.java
  hello.game.cattingServiceTest.cattingServiceTest
 hello/game/PPTtest/UserService2.java
  hello.game.PPTtest.UserService2
-hello/game/PPTtest/PPTtest2.java
- hello.game.PPTtest.PPTtest2
-hello/game/PPTtest/UserService.java
- hello.game.PPTtest.UserService
 hello/game/PPTtest/PPTtest.java
  hello.game.PPTtest.PPTtest
+hello/game/PPTtest/UserService.java
+ hello.game.PPTtest.UserService
 hello/game/PPTtest/PPTtest3.java
  hello.game.PPTtest.PPTtest3
+hello/game/PPTtest/PPTtest2.java
+ hello.game.PPTtest.PPTtest2
 hello/game/exchangeMoneyTest/InjectMocksTest.java
  hello.game.exchangeMoneyTest.InjectMocksTest
 hello/game/exchangeMoneyTest/exchangeMoneyTest.java

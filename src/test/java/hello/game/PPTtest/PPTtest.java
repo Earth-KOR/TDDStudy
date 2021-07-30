@@ -15,8 +15,8 @@ public class PPTtest {
     void PPTtest1 () {
 
         UserService userService = spy(UserService.class);
-
-        when(userService.test()).thenReturn("stub 출력");
+//
+//        when(userService.test()).thenReturn("stub 출력");
 
         System.out.println(userService.test() + " PPT Test");
         System.out.println(userService.test2() + " PPT Test");

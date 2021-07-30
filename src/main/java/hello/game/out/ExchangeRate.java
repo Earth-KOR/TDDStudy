@@ -16,7 +16,7 @@ public class ExchangeRate {
                     Rate = 1.6;
                     break;
                 case "JAN":
-                    Rate = 2;
+                    Rate = 2.3;
                     break;
                 default:
                     Rate = 1.0;

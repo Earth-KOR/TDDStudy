@@ -1,6 +1,7 @@
 package hello.game.PPTtest;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -11,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 @SpringBootTest
 public class PPTtest2 {
 
-    @MockBean
+    @SpyBean
     private UserService userService;
 
     @Test
